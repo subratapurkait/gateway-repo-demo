@@ -46,7 +46,14 @@ function ormConfig(): TypeOrmModuleOptions {
       migrations: commonConf.MIGRATIONS,
       cli: commonConf.CLI,
       migrationsRun: commonConf.MIGRATIONS_RUN,
-      // cache: ...redis
+      cache: {
+        type: 'redis', // Enable Redis caching
+        options: {
+          host: 'localhost',
+          port: 6379,
+        },
+        duration: 30000, // cache duration in milliseconds (e.g., 30 seconds)
+      },
     };
   }
 
@@ -80,6 +87,14 @@ function ormConfig(): TypeOrmModuleOptions {
       migrations: commonConf.MIGRATIONS,
       cli: commonConf.CLI,
       migrationsRun: commonConf.MIGRATIONS_RUN,
+      cache: {
+        type: 'redis', // Enable Redis caching
+        options: {
+          host: 'localhost',
+          port: 6379,
+        },
+        duration: 30000, // cache duration in milliseconds (e.g., 30 seconds)
+      },
     };
   }
 
