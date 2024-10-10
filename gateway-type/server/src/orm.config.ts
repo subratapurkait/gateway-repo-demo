@@ -10,14 +10,6 @@ function ormConfig(): TypeOrmModuleOptions {
     },
     MIGRATIONS_RUN: true,
   };
-  const redis = {
-    type: 'redis', // Enable Redis caching
-    options: {
-      host: 'localhost',
-      port: 6379,
-    },
-    duration: 30000, // cache duration in milliseconds (e.g., 30 seconds)
-  };
 
   let ormconfig: TypeOrmModuleOptions = {
     name: 'default',
@@ -39,14 +31,13 @@ function ormConfig(): TypeOrmModuleOptions {
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '12345',
+      password: 'admin#123',
       logging: false,
       synchronize: commonConf.SYNCRONIZE,
       entities: commonConf.ENTITIES,
       migrations: commonConf.MIGRATIONS,
       cli: commonConf.CLI,
       migrationsRun: commonConf.MIGRATIONS_RUN,
-      // cache: ...redis
     };
   }
 
@@ -73,7 +64,7 @@ function ormConfig(): TypeOrmModuleOptions {
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: '12345',
+      password: 'admin#123',
       logging: false,
       synchronize: commonConf.SYNCRONIZE,
       entities: commonConf.ENTITIES,

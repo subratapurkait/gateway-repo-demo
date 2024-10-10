@@ -1,0 +1,23 @@
+name: nhipster
+services:
+  app:
+    build: ..
+    environment:
+      - BACKEND_ENV=prod
+    ports:
+      - 8081:8081
+    depends_on:
+      postgresql:
+        condition: service_healthy
+  postgresql:
+    extends:
+      file: ./postgresql.yml
+      service: postgresql
+  consul:
+    extends:
+      file: ./consul.yml
+      service: consul
+  consul-config-loader:
+    extends:
+      file: ./consul.yml
+      service: consul-config-loader
