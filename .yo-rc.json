@@ -1,0 +1,29 @@
+{
+  "generator-jhipster": {
+    "applicationType": "gateway",
+    "authenticationType": "jwt",
+    "baseName": "nhipster",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "3.0.0"
+      }
+    ],
+    "clientFramework": "react",
+    "clientTestFrameworks": [],
+    "clientTheme": "none",
+    "creationTimestamp": 1728566210881,
+    "devServerPort": 9060,
+    "enableTranslation": true,
+    "entities": [],
+    "jhipsterVersion": "8.5.0",
+    "languages": ["en"],
+    "microfrontend": false,
+    "microfrontends": [],
+    "nativeLanguage": "en",
+    "prodDatabaseType": "postgresql",
+    "serverPort": "8080",
+    "testFrameworks": [],
+    "withAdminUi": true
+  }
+}
